@@ -58,11 +58,11 @@ app = Flask(__name__)
 def home():
 	print("Server received request for homepage")
 	return   """<html><head></head><body><h1>Climate App Home Page</h1>
-	<p><em>Available URL routes:</em></p></body><br/>/api/v1.0/precipitation --  Rainfall data over the past 12 months.<br/><br/> 
-	/api/v1.0/stations -- Weather station information. <br/><br/> 
-	/api/v1.0/tobs -- Temperature observations from the most active station. <br/><br/> 
-	/api/v1.0/start -- The minimum, maximum and average temperatures for a specific date. <br/><br/> 
-	/api/v1.0/start/end -- The minimum, maximum and average temperatures for a range of dates. </html>"""
+	<p><em>Available URL routes:</em></p><ul></body><br/><li><u>/api/v1.0/precipitation</u> --  Rainfall data over the past 12 months.<br/><br/> 
+	<li><u>/api/v1.0/stations</u> -- Weather station information. <br/><br/> 
+	<li><u>/api/v1.0/tobs</u> -- Temperature observations from the most active station. <br/><br/> 
+	<li><u>/api/v1.0/start</u> -- The minimum, maximum and average temperatures for a specific date. <br/><br/> 
+	<li><u>/api/v1.0/start/end</u> -- The minimum, maximum and average temperatures for a range of dates. </html></ul>"""
 
 
 @app.route("/api/v1.0/precipitation")
@@ -87,7 +87,7 @@ def datesa():
             <h2>Weather data for a specific date</h2>
             <form action="/date">
                 Enter a specific date between 2010/01/01 and 2017/08/23</br>
-                Must be in YYYYMMDD format </br>
+                Must be in <em>YYYYMMDD</em> format </br>
                 <input type = 'text' name = 'startdate'></br>
                 <input type = 'submit' value = 'Continue'>
             </form>
@@ -116,7 +116,7 @@ def daterange():
             <h2>Weather data for a range of dates</h2>
             <form action="/date2">
                 Enter a range of dates between 2010/01/01 and 2017/08/23</br>
-                Must be in YYYYMMDD format </br>
+                Must be in <em>YYYYMMDD</em> format </br>
                 <input type = 'text' name = 'startdate'></br>
                 <input type = 'text' name = 'enddate'</br>
                 <input type = 'submit' value = 'Continue'>
