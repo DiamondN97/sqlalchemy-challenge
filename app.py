@@ -58,11 +58,12 @@ app = Flask(__name__)
 def home():
 	print("Server received request for homepage")
 	return   """<html><head></head><body><h1>Climate App Home Page</h1>
-	<p><em>Available URL routes:</em></p><ul></body><br/><li><u>/api/v1.0/precipitation</u> --  Rainfall data over the past 12 months.<br/><br/> 
-	<li><u>/api/v1.0/stations</u> -- Weather station information. <br/><br/> 
-	<li><u>/api/v1.0/tobs</u> -- Temperature observations from the most active station. <br/><br/> 
-	<li><u>/api/v1.0/start</u> -- The minimum, maximum and average temperatures for a specific date. <br/><br/> 
-	<li><u>/api/v1.0/start/end</u> -- The minimum, maximum and average temperatures for a range of dates. </html></ul>"""
+	<p><em>Available URL routes:</em></p><ul></body><br/>
+	<li><a href="http://127.0.0.1:5000/api/v1.0/precipitation"><u>/api/v1.0/precipitation</u></a> --  Rainfall data over the past 12 months.<br/><br/> 
+	<li><a href="http://127.0.0.1:5000/api/v1.0/stations"><u>/api/v1.0/stations</u></a> -- Weather station information. <br/><br/> 
+	<li><a href="http://127.0.0.1:5000/api/v1.0/tobs"><u>/api/v1.0/tobs</u></a> -- Temperature observations from the most active station. <br/><br/> 
+	<li><a href="http://127.0.0.1:5000/api/v1.0/start"><u>/api/v1.0/start</u></a> -- The minimum, maximum and average temperatures for a specific date. <br/><br/> 
+	<li><a href="http://127.0.0.1:5000/api/v1.0/start/end"><u>/api/v1.0/start/end</u></a> -- The minimum, maximum and average temperatures for a range of dates. </html></ul>"""
 
 
 @app.route("/api/v1.0/precipitation")
